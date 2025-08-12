@@ -29,9 +29,9 @@ export default function StockPage() {
     (async () => {
       setLoading(true);
       const [p, f, n] = await Promise.all([
-        fetch(`${API_BASE}/api/stock/${ticker}/price?range=5y`).then(r => r.json()),
-        fetch(`${API_BASE}/api/stock/${ticker}/fundamentals`).then(r => r.json()),
-        fetch(`${API_BASE}/api/stock/${ticker}/news`).then(r => r.json()),
+        fetch(`/api/stock/${ticker}/price?range=5y`).then(r => r.json()),
+        fetch(`/api/stock/${ticker}/fundamentals`).then(r => r.json()),
+        fetch(`/api/stock/${ticker}/news`).then(r => r.json()),
       ]);
       setSeries(p.series || []);
       setFundamentals(f);
