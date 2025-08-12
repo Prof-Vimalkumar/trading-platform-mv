@@ -1,3 +1,4 @@
+cat > .gitignore << 'EOF'
 # Node / Next.js
 node_modules/
 .next/
@@ -26,3 +27,5 @@ backend/.venv/
 dist/
 build/
 coverage/
+EOF
+
